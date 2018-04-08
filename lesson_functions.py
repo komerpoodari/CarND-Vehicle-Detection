@@ -4,6 +4,31 @@ import cv2
 from skimage.feature import hog
 
 
+
+
+#define a function to convert color
+def convert_color(img, conv='YCrCb'):
+    if conv == 'YCrCb':
+        return cv2.cvtColor(img, cv2.COLOR_RGB2YCrCb)
+    
+    if conv == 'BGR':
+        return cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+
+    if conv == 'YUV':
+        return cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
+
+    if conv == 'LUV':
+        return cv2.cvtColor(img, cv2.COLOR_RGB2LUV)
+    
+    if conv == 'HLS':        
+        return cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    
+    if conv == 'HSV':
+        return cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+    else:
+        retun(np.copy(img))
+    
+
 # Define a function to return HOG features and visualization
 def get_hog_features(img, orient, pix_per_cell, cell_per_block,
                      vis=False, feature_vec=True):
@@ -56,9 +81,12 @@ def extract_features(imgs, color_space='RGB', spatial_size=(32, 32),
                      spatial_feat=True, hist_feat=True, hog_feat=True):
     # Create a list to append feature vectors to
     features = []
+    
     # Iterate through the list of images
     for file in imgs:
         file_features = []
+        
+            
         # Read in each one by one
         image = mpimg.imread(file)
         # apply color conversion if other than 'RGB'
@@ -97,7 +125,9 @@ def extract_features(imgs, color_space='RGB', spatial_size=(32, 32),
                                                 pix_per_cell, cell_per_block, vis=False, feature_vec=True)
             # Append the new feature vector to the features list
             file_features.append(hog_features)
+
         features.append(np.concatenate(file_features))
+        
     # Return list of feature vectors
     return features
 
