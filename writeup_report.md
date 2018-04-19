@@ -77,9 +77,9 @@ The following table describes the respective classification accuracies for vario
 
 
 
-| Num | color_space| Orientations | pix_per_cell | cell_per_block | hog_channel | spatial | Histogram | HOG | Accuracy |
-|:---:|:----------:|:------------:|:------------:|:--------------:|:-----------:|:-------:|:---------:|:---:|:--------:| 
-| 1   | YUV        | 9            | 8            | 4              | Y           | Y       | Y         | Y   | 0.9637   |
+| Num | color| Orient | pix/cell | cell/block | hog_channel | spatial | Histo | HOG | Accuracy |
+|:---:|:----:|:------:|:--------:|:----------:|:-----------:|:-------:|:-----:|:---:|:--------:| 
+| 1   | YUV  | 9      | 8        | 4          | Y           | Y       | Y     | Y   | 0.9637   |
 
 
 | 579, 460      | 250, 0        | top-left       |
