@@ -87,7 +87,7 @@ The following table describes the respective classification accuracies for vario
 |9 |YCrCb      |9            |8           |4             |All        |Y      |Y        |Y   |0.9840  |
 |10|YCrCb      |12           |8           |4             |All        |Y      |Y        |Y   |0.9840  |
 |11|YCrCb      |16           |8           |4             |All        |Y      |Y        |Y   |0.9834  |
-**|12|YCrCb      |9            |8           |2             |All        |Y      |Y        |Y   |0.9865  |**
+|12|YCrCb      |9            |8           |2             |All        |Y      |Y        |Y   |0.9865  |
 |12|YCrCb      |12           |8           |2             |1          |Y      |Y        |Y   |0.9676  |
 |13|YCrCb      |12           |8           |2             |2          |Y      |Y        |Y   |0.9485  |
 
@@ -156,8 +156,6 @@ I implemented the following techniques to filter out false positives.
 ![alt text][image9]
 
 ![alt text][image10]
-
-![alt text][image11]
 
 ![alt text][image12]
 
