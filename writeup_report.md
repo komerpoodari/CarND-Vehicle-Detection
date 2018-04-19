@@ -80,26 +80,19 @@ The following table describes the respective classification accuracies for vario
 | Num | color| Orient | pix/cell | cell/block | hog_channel | spatial | Histo | HOG | Accuracy |
 |:---:|:----:|:------:|:--------:|:----------:|:-----------:|:-------:|:-----:|:---:|:--------:| 
 | 1   | YUV  | 9      | 8        | 4          | Y           | Y       | Y     | Y   | 0.9637   |
+| 2   | RGB  | 9      | 8        | 4          | ALL         | Y       | Y     | Y   | 0.9741   |
+| 3   | HSV  | 9      | 8        | 4          | ALL         | Y       | Y     | Y   | 0.9803   |
+| 4   | HLS  | 9      | 8        | 4          | ALL         | Y       | Y     | Y   | 0.9809   |
+| 5   | YCrCB| 9      | 8        | 4          | ALL         | Y       | Y     | Y   | 0.9862   |
+| 6   | YCrCB| 9      | 8        | 4          | ALL         | N       | Y     | Y   | 0.9662   |
+| 7   | YCrCB| 9      | 8        | 4          | ALL         | N       | N     | Y   | 0.9718   |
+| 8   | YCrCB| 9      | 8        | 4          | ALL         | N       | N     | Y   | 0.9718   |
+| 9   | YCrCB| 12     | 8        | 4          | ALL         | Y       | Y     | Y   | 0.9840   |
+| 10  | YCrCB| 16     | 8        | 4          | ALL         | Y       | Y     | Y   | 0.9834   |
+| 11  | YCrCB| 9      | 8        | 2          | ALL         | Y       | Y     | Y   | 0.9865   |
+| 12  | YCrCB| 12     | 8        | 2          | 1           | Y       | Y     | Y   | 0.9676   |
+| 13  | YCrCB| 12     | 8        | 2          | 2           | Y       | Y     | Y   | 0.9485   |
 
-
-| 579, 460      | 250, 0        | top-left       |
-| 705, 460      | 1030, 0       | top-right      |
-| 1060, 690     | 1030, 720     | bottom-right   |
-
-
-|1 |YUV        |9            |8           |4             |1          |Y      |Y        |Y   |0.9637  |
-|2 |RGB        |9            |8           |4             |All        |Y      |Y        |Y   |0.9741  |
-|4 |HSV        |9            |8           |4             |All        |Y      |Y        |Y   |0.9803  |
-|5 |HLS        |9            |8           |4             |All        |Y      |Y        |Y   |0.9809  |
-|6 |YCrCb      |9            |8           |4             |All        |Y      |Y        |Y   |0.9862  |
-|7 |YCrCb      |9            |8           |4             |All        |N      |Y        |Y   |0.9662  |
-|8 |YCrCb      |9            |8           |4             |All        |N      |N        |Y   |0.9718  |
-|9 |YCrCb      |9            |8           |4             |All        |Y      |Y        |Y   |0.9840  |
-|10|YCrCb      |12           |8           |4             |All        |Y      |Y        |Y   |0.9840  |
-|11|YCrCb      |16           |8           |4             |All        |Y      |Y        |Y   |0.9834  |
-|12|YCrCb      |9            |8           |2             |All        |Y      |Y        |Y   |0.9865  |
-|12|YCrCb      |12           |8           |2             |1          |Y      |Y        |Y   |0.9676  |
-|13|YCrCb      |12           |8           |2             |2          |Y      |Y        |Y   |0.9485  |
 
 
 I did the histogram bin size = 32 and spatial bin size = 32; decreasing them also resulted in more false positives.
