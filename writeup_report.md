@@ -75,8 +75,18 @@ hog_fea = True`
 
 The following table describes the respective classification accuracies for various combinations of parameters.
 
-|# |color space|orientations |pix_per_cell|cell_per_block|hog_channel|Spatial|Histogram|HOG |Accuracy|
-|::|:---------:|:-----------:|:----------:|:------------:|:---------:|:-----:|:-------:|:--:|:------:|
+
+
+| Num | color_space| Orientations | pix_per_cell | cell_per_block | hog_channel | spatial | Histogram | HOG | Accuracy |
+|:---:|:----------:|:------------:|:------------:|:--------------:|:-----------:|:-------:|:---------:|:---:|:--------:| 
+| 1   | YUV        | 9            | 8            | 4              | Y           | Y       | Y         | Y   | 0.9637   |
+
+
+| 579, 460      | 250, 0        | top-left       |
+| 705, 460      | 1030, 0       | top-right      |
+| 1060, 690     | 1030, 720     | bottom-right   |
+
+
 |1 |YUV        |9            |8           |4             |1          |Y      |Y        |Y   |0.9637  |
 |2 |RGB        |9            |8           |4             |All        |Y      |Y        |Y   |0.9741  |
 |4 |HSV        |9            |8           |4             |All        |Y      |Y        |Y   |0.9803  |
