@@ -134,7 +134,7 @@ In this example, some false positive are removed, by using decision function con
 ### Video Implementation
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a https://youtu.be/BLHDzsBI1p0
+Here's a https://youtu.be/vMlQDK1xGXM
 
 
 
@@ -144,7 +144,7 @@ I implemented the following techniques to filter out false positives.
 1. Used decision function confidence score in conjunction with svm predition score.  The logic is implemented in function `find_cars()`.
 2. Implemented heatmaps and overlapping scales. The logic is presented in `find_cars()` function and heat related functions in **4.Heat Maps** section functions `add_heat()` and `apply_threshold()`.
 3. Averaging the heatmaps over 'n' number of frames and then applyig threshold. The logic is implemented in function `process_image()`.
-4. Ignoring detected vehicles in unusual places and with unsusually small sizes. The respective logic is implemented in `check_box_sizes()` and `check_box_location()`.  Personally I did not like this approach, though I implemented as a possibility. I would rather prefer finetuning detection algrorithms.
+4. Ignoring detected vehicles in unusual places and with unsusually small sizes. The respective logic is implemented in `check_box_sizes()` and `check_box_location()`.  Personally I did not like this approach, though I implemented as a possibility. I would rather prefer finetuning detection algrorithms and training with right dataset.
 
 
 
@@ -168,14 +168,16 @@ I implemented the following techniques to filter out false positives.
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-I mainly faced the false positive and accuracy issues from the implementation perspective.  
+I mainly faced false positive and classification accuracy issues from the implementation perspective.  
 
 I also faced significant issue in computation capabilities of my laptop.  
 Though 'rbf' kernel offered better accuracy, it took hours of computation time for predictions. I am taking help from Udacity customer experience lead. 
 
 My pipeline will fail on generic roads such as HWY 17. I would like to use better algorithms rather than SVM.  
-As with any machine learning exercise,  there are too many parameters to experiment with, color space, size of spatial and color bins, cells/block, SVM kernel and SVM parameter 'C'. The data given seems to be too generic. 
+As with any machine learning exercise,  there are too many parameters to experiment with, color space, size of spatial and color bins, cells/block, SVM kernel and SVM parameter 'C'. 
 
-There is lot scope to sanitize data, removing time-series and picture of trees and horizon containing skies.
+The data given seems to be too broad. There is lot scope to sanitize data, optimizing time-series and picture of trees and horizon containing skies.
+
+I would prefer deep learning algorithms neural networks than traditional computer vision algorithms with feature extraction.
 
 
